@@ -45,10 +45,11 @@ export async function POST(request: NextRequest) {
       text: obituaryText,
       generatedAt: new Date().toISOString(),
     });
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Error generating obituary:', error);
+    const errorMessage = error instanceof Error ? error.message : 'Failed to generate obituary';
     return NextResponse.json(
-      { error: error.message || 'Failed to generate obituary' },
+      { error: errorMessage },
       { status: 500 }
     );
   }

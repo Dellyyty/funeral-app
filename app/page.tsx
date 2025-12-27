@@ -24,7 +24,7 @@ export default function Home() {
           </div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Create a beautiful, heartfelt obituary with the help of AI. Fill in the details below,
-            and we'll craft a meaningful tribute to honor your loved one's memory.
+            and we&apos;ll craft a meaningful tribute to honor your loved one&apos;s memory.
           </p>
         </div>
 

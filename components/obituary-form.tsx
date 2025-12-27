@@ -67,8 +67,9 @@ export function ObituaryForm({ onGenerate }: ObituaryFormProps) {
         text: result.text,
         generatedAt: new Date(result.generatedAt),
       });
-    } catch (err: any) {
-      setError(err.message || "An error occurred while generating the obituary");
+    } catch (err: unknown) {
+      const errorMessage = err instanceof Error ? err.message : "An error occurred while generating the obituary";
+      setError(errorMessage);
     } finally {
       setIsGenerating(false);
     }

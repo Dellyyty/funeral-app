@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Heart } from "lucide-react";
 import { ObituaryForm } from "@/components/obituary-form";
 import { ObituaryPreview } from "@/components/obituary-preview";
+import { Testimonials } from "@/components/testimonials";
 import { GeneratedObituary } from "@/types";
 
 export default function Home() {
@@ -36,6 +37,13 @@ export default function Home() {
             <ObituaryForm onGenerate={setGeneratedObituary} />
           )}
         </div>
+
+        {/* Testimonials Section */}
+        {!generatedObituary && (
+          <div className="mb-12">
+            <Testimonials />
+          </div>
+        )}
 
         {/* Footer */}
         <footer className="text-center text-sm text-gray-500 mt-12 pb-8">

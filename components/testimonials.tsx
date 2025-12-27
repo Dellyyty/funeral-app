@@ -102,7 +102,7 @@ export function Testimonials() {
             </div>
             
             <p className="text-gray-700 mb-4 leading-relaxed">
-              "{testimonial.text}"
+              &ldquo;{testimonial.text}&rdquo;
             </p>
             
             <div className="border-t pt-4">
